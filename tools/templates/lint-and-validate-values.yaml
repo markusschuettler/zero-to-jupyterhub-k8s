@@ -406,8 +406,12 @@ ingress:
   enabled: true
   annotations:
     mock: mock
-  hosts: []
-  tls: []
+  hosts:
+    - mock-public-url
+  tls: 
+    - hosts:
+      - mock-public-url
+      secretName: mock-tls
 
 
 cull:
